@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/logo.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<title>CSS Grid Layout</title>
+</head>
+<body>
+	<div class="container">
+		<!-- Header -->
+		<div class="header">
+			<div class="logo">
+				<a href="#">
+					<h2>Logo</h2>
+				</a>
+			</div>
+			<div class="navigation">
+				<input type="checkbox" class="toggle-menu">
+				<div class="hamburger"></div>
+				<ul class="menu">
+					<li><a href="#Desert">Desert</a></li>
+					<li><a href="#Seabeach">Sea Beach</a></li>
+					<li><a href="#Mountain">Mountain</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div class="sidebar">
+			<ul>
+				<li><a href="#">Dashboard</a></li>
+				<li>
+					<a href="#" class="feat-btn">Features 
+						<ion-icon name="chevron-down-outline" class="first"></ion-icon>
+					</a>
+					<ul class="feat-show">
+						<li><a href="#">Pages</a></li>
+						<li><a href="#">Elements</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="serv-btn">Services
+						<ion-icon name="chevron-down-outline" class="second"></ion-icon>
+					</a>
+					<ul class="serv-show">
+						<li><a href="#">App Design</a></li>
+						<li><a href="#">Web Design</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Overview</a></li>
+				<li><a href="#">Shortcuts</a></li>
+				<li><a href="#">Feedback</a></li>
+			</ul>
+		</div>
+
+		<!-- Content -->
+		<div class="content">
+			<section id="Desert">
+				<div class="blog-post">
+					<div class="meta">
+						<h1>DESERT</h1>
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+						<small>By <a href="#">Admin</a> on Mar 12, 2024</small>
+					</div>
+					<div class="post">
+						<img src="images/desert.jpg">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. <a href="">...</a></p>
+					</div>
+				</div>
+			</section>
+			<section id="Seabeach">
+				<div class="blog-post">
+					<div class="meta">
+						<h1>SEA BEACH</h1>
+						<h3>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						</h3>
+						<small>By <a href="#">Admin</a> on Mar 12, 2024</small>
+					</div>
+					<div class="post">
+						<img src="images/sea.jpg">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. <a href="">...</a></p>
+					</div>
+				</div>
+			</section>
+			<section id="Mountain">
+				<div class="blog-post">
+					<div class="meta">
+						<h1>MOUNTAIN</h1>
+						<h3>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						</h3>
+						<small>By <a href="#">Admin</a> on Mar 12, 2024</small>
+					</div>
+					<div class="post">
+						<img src="images/mountain.jpg">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. <a href="">...</a></p>
+					</div>
+				</div>
+			</section>
+			<div class="button">
+	      <a href="#Desert">&#8673;</a>
+	    </div>
+		</div>
+
+		<!-- Footer -->
+		<div class="footer">
+			<small>Design by Me &copy; Copyright, 2024-2025</small>
+		</div>
+	</div>
+
+	<script>
+		$('.feat-btn').click(function(){
+			$('.sidebar ul .feat-show').toggleClass("show");
+			$('.sidebar ul .first').toggleClass("rotate");
+		});
+		$('.serv-btn').click(function(){
+			$('.sidebar ul .serv-show').toggleClass("show1");
+			$('.sidebar ul .second').toggleClass("rotate");
+		});
+		$('.sidebar ul li').click(function(){
+			$(this).addClass("active").siblings().removeClass("active");
+			$('.sidebar ul ul li').removeClass("active");
+		});
+	</script>
+
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
